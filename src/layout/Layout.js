@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import DashNav from '../components/nav/dashboard';
 import LoginNav from '../components/nav/login';
-import loggedin from '../utils/const';
 
 const Layout = ({ children }) => {
+  const loggedin = useSelector((state) => state.login.loggedIn);
   return (
     <>
       <div
