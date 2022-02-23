@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+}
+
+.back {
+  width: 39px;
+  height: 19px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #8692a6;
+}
+
+.rightStep {
+  height: 17px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #bdbdbd;
+  justify-content: end;
+}
+
+.rightTitle {
+  height: 19px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #8692a6;
+}
+
+.loginTitle {
+  width: 264px;
+  height: 36px;
+  left: 593px;
+  top: 103px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginSubTitle {
+  width: 411px;
+  height: 56px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #8692a6;
+}

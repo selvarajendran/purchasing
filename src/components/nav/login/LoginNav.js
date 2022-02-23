@@ -15,6 +15,9 @@ const LoginNav = () => {
       <nav>
         <Link to="/signup">Signup</Link>
       </nav>
+      <nav>
+        <Link to="/forgotpassword">Forgot Password</Link>
+      </nav>
     </nav>
   );
 };

@@ -1,28 +1,27 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import DashNav from '../components/nav/dashboard';
-import LoginNav from '../components/nav/login';
+import { LoginLeft } from '../components/login';
 
 const Layout = ({ children }) => {
   const loggedin = useSelector((state) => state.login.loggedIn);
   return (
-    <>
+    <div style={{ display: 'flex' }}>
       <div
         style={{
-          width: '25%',
-          border: '1px solid red'
+          width: '490px',
+          float: 'left'
         }}
       >
-        {loggedin ? <DashNav /> : <LoginNav />}
+        {loggedin ? null : <LoginLeft />}
       </div>
       <div
         style={{
-          width: '75%'
+          width: '60vw'
         }}
       >
         {children}
       </div>
-    </>
+    </div>
   );
 };
 
