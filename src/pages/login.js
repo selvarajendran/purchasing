@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoginHeader } from '../components/login';
+import { LoginHeader, LoginTitle } from '../components/login';
 
 const login = () => {
   return (
@@ -8,10 +8,10 @@ const login = () => {
     >
       <LoginHeader backText="Back" title="Personal Info." step="STEP 01/02" />
       <div style={{ display: 'flex', flexDirection: 'column', margin: '30px' }}>
-        <div className="loginTitle">Register Account!</div>
-        <div className="loginSubTitle">
-          For the purpose of industry regulation, your details are required.
-        </div>
+        <LoginTitle
+          title="Register Account!"
+          subTitle="For the purpose of industry regulation, your details are required."
+        />
       </div>
     </div>
   );
