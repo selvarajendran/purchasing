@@ -15,11 +15,12 @@ const LoginLeft = () => {
           style={{
             width: '100%',
             height: '100vh',
-            minHeight: '600px',
+            minHeight: '772px',
+            maxWidth: '400px',
             minWidth: '400px',
             background: `url(${bg})`,
-            backgroundPosition: 'left',
-            backgroundSize: 'contain',
+            backgroundPosition: 'left top',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
           }}
         />
@@ -28,7 +29,7 @@ const LoginLeft = () => {
             position: 'absolute',
             display: 'flex',
             color: '#fff',
-            top: '44%',
+            top: '300px',
             left: '67px'
           }}
         >
