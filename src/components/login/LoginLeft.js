@@ -28,7 +28,6 @@ const LoginLeft = () => {
             position: 'absolute',
             display: 'flex',
             color: '#fff',
-            width: '49%',
             top: '44%',
             left: '67px'
           }}
