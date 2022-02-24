@@ -8,7 +8,7 @@ const register = () => {
   const history = useHistory();
   const handleOnClick = (data) => {
     console.log(data);
-    history.push('/signup');
+    history.push('/profile');
   };
   return (
     <div

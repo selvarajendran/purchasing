@@ -3,11 +3,13 @@ import {
   ROUTE_ACCOUNT_SUPPLIER,
   ROUTE_LOGIN,
   ROUTE_SIGNUP,
+  ROUTE_PROFILE,
   ROUTE_FORGOT_PASSWORD
 } from './constant';
 
 import Login from '../pages/login';
 import Signup from '../pages/signup';
+import Profile from '../pages/profile';
 import ForgotPassword from '../pages/forgotpassword';
 import Manufacture from '../pages/manufacture';
 import Supplier from '../pages/supplier';
@@ -24,6 +26,10 @@ export const loginRoutes = [
   {
     path: ROUTE_FORGOT_PASSWORD,
     component: ForgotPassword
+  },
+  {
+    path: ROUTE_PROFILE,
+    component: Profile
   }
 ];
 

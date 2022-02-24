@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
+import Select from 'react-select';
+
+const options = [
+  { value: 'india', label: 'India' },
+  { value: 'us', label: 'United States' },
+  { value: 'uk', label: 'United Kingdom' }
+];
 
 /* eslint-disable react/jsx-props-no-spreading */
 const FormElement = ({ name, control, placeholder, htmlFor, isMandatory, type }) => {
@@ -10,22 +17,41 @@ const FormElement = ({ name, control, placeholder, htmlFor, isMandatory, type })
       <div className="label">
         <label htmlFor={name}>{htmlFor + (isMandatory ? '*' : '')}</label>
       </div>
-      <Controller
-        name={name}
-        control={control}
-        render={({ field }) => {
-          return (
-            <input
-              className="input"
-              type={type}
-              name={name}
-              control={control}
-              placeholder={placeholder}
-              {...field}
-            />
-          );
-        }}
-      />
+      {type !== 'select' && (
+        <Controller
+          name={name}
+          control={control}
+          render={({ field }) => {
+            return (
+              <input
+                className="input"
+                type={type}
+                name={name}
+                control={control}
+                placeholder={placeholder}
+                {...field}
+              />
+            );
+          }}
+        />
+      )}{' '}
+      {type === 'select' && (
+        <Controller
+          name="country"
+          control={control}
+          render={({ field }) => {
+            return (
+              <Select
+                className="select"
+                name={name}
+                placeholder={placeholder}
+                options={options}
+                {...field}
+              />
+            );
+          }}
+        />
+      )}
     </div>
   );
 };

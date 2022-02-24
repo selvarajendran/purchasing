@@ -255,3 +255,10 @@ input[type='checkbox']:checked {
   margin-top: 14px;
   justify-content: start;
 }
+
+.select {
+  width: 426px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 11%);
+  border-radius: 6px;
+}
