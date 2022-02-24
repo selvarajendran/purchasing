@@ -44,7 +44,6 @@
 }
 
 .loginTitle {
-  width: 264px;
   height: 36px;
   left: 593px;
   top: 103px;
@@ -59,7 +58,6 @@
 }
 
 .loginSubTitle {
-  width: 411px;
   height: 56px;
   font-family: Inter;
   font-style: normal;
@@ -227,4 +225,33 @@ input[type='checkbox']:checked {
   text-align: center;
 
   color: #000000;
+}
+
+.forgotPassword {
+  height: 19px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #00c1f2;
+  margin-top: 14px;
+  justify-content: end;
+  width: 426px;
+}
+
+.signup {
+  height: 19px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #00c1f2;
+  margin-top: 14px;
+  justify-content: start;
 }

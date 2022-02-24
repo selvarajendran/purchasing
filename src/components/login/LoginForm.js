@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 
 /* eslint-disable react/jsx-props-no-spreading */
 const FormElement = ({ name, control, placeholder, htmlFor, isMandatory, type }) => {
@@ -42,7 +43,14 @@ const Terms = ({ register, termText }) => {
   );
 };
 
-const LoginForm = ({ fields, termsAndCondition, action, buttonText }) => {
+const LoginForm = ({ fields, termsAndCondition, action, buttonText, forgotPassword, signup }) => {
+  const history = useHistory();
+  const forgotPasswordOnClick = () => {
+    history.push('/forgotpassword');
+  };
+  const signupOnClick = () => {
+    history.push('/signup');
+  };
   const defaultValue = {};
   fields.map((item) => {
     defaultValue[item.name] = item.default;
@@ -69,20 +77,46 @@ const LoginForm = ({ fields, termsAndCondition, action, buttonText }) => {
         />
       ))}
       {termsAndCondition && <Terms register={register} termText="I agree to terms & condition" />}
+      <div style={{ width: '426px', display: 'flex' }}>
+        {signup && (
+          <div
+            className="signup"
+            onClick={signupOnClick}
+            onKeyDown={signupOnClick}
+            aria-hidden="true"
+          >
+            Signup
+          </div>
+        )}
+        {forgotPassword && (
+          <div
+            className="forgotPassword"
+            onClick={forgotPasswordOnClick}
+            onKeyDown={forgotPasswordOnClick}
+            aria-hidden="true"
+          >
+            Forgot Password
+          </div>
+        )}
+      </div>
       <button type="submit">{buttonText}</button>
     </form>
   );
 };
 
 LoginForm.defaultProps = {
-  termsAndCondition: false
+  termsAndCondition: false,
+  forgotPassword: false,
+  signup: false
 };
 
 LoginForm.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.any).isRequired,
   termsAndCondition: PropTypes.bool,
   action: PropTypes.func.isRequired,
-  buttonText: PropTypes.string.isRequired
+  buttonText: PropTypes.string.isRequired,
+  forgotPassword: PropTypes.bool,
+  signup: PropTypes.bool
 };
 
 export default LoginForm;
