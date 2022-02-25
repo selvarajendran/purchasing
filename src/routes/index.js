@@ -1,18 +1,24 @@
 import {
-  ROUTE_ACCOUNT_MANUFACTURE,
-  ROUTE_ACCOUNT_SUPPLIER,
   ROUTE_LOGIN,
   ROUTE_SIGNUP,
   ROUTE_PROFILE,
-  ROUTE_FORGOT_PASSWORD
+  ROUTE_FORGOT_PASSWORD,
+  ROUTE_INBOX,
+  ROUTE_PROCESSED,
+  ROUTE_PATIENT_REPORTS,
+  ROUTE_ARCHIVED,
+  ROUTE_TRASH
 } from './constant';
 
 import Login from '../pages/login';
 import Signup from '../pages/signup';
 import Profile from '../pages/profile';
 import ForgotPassword from '../pages/forgotpassword';
-import Manufacture from '../pages/manufacture';
-import Supplier from '../pages/supplier';
+import Inbox from '../pages/inbox';
+import PatientReports from '../pages/patientReports';
+import Trash from '../pages/trash';
+import Archived from '../pages/archived';
+import Processed from '../pages/processed';
 
 export const loginRoutes = [
   {
@@ -35,12 +41,24 @@ export const loginRoutes = [
 
 export const dashboardRoutes = [
   {
-    path: ROUTE_ACCOUNT_SUPPLIER,
-    component: Supplier
+    path: ROUTE_INBOX,
+    component: Inbox
   },
   {
-    path: ROUTE_ACCOUNT_MANUFACTURE,
-    component: Manufacture
+    path: ROUTE_PROCESSED,
+    component: Processed
+  },
+  {
+    path: ROUTE_PATIENT_REPORTS,
+    component: PatientReports
+  },
+  {
+    path: ROUTE_ARCHIVED,
+    component: Archived
+  },
+  {
+    path: ROUTE_TRASH,
+    component: Trash
   }
 ];
 
@@ -54,6 +72,6 @@ export const loginRedirects = [
 export const dashboardRedirects = [
   {
     path: '/',
-    redirectTo: ROUTE_ACCOUNT_SUPPLIER
+    redirectTo: ROUTE_INBOX
   }
 ];

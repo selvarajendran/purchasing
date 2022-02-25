@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #2e4765;
+}
+
 /* Login screen starts here */
 
 .back {
@@ -295,7 +300,7 @@ input[type='checkbox']:checked {
   border-radius: 0px 24px 24px 0px;
   margin-top: 5px;
   margin-bottom: 5px;
-  transition: width 0s;
+  transition: width 0.1s;
 }
 
 .content {
@@ -428,7 +433,6 @@ input[type='checkbox']:checked {
 }
 
 .sidebar-items {
-  padding-left: 10px;
   margin-top: 30px;
 }
 
@@ -451,6 +455,7 @@ input[type='checkbox']:checked {
   height: 40px;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 10px;
 }
 
 .Sidebar.Closed {
@@ -468,4 +473,17 @@ input[type='checkbox']:checked {
 .Sidebar.Closed .sidebar-icon1 {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.active .sidebar-item {
+  background: rgba(0, 193, 242, 0.1);
+  mix-blend-mode: normal;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.active .sidebar-icon,
+.active .sidebar-icon1,
+.active .sidebar-title,
+a.active {
+  color: #3f8cff;
 }
