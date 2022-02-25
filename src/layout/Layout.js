@@ -2,9 +2,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { LoginLeft } from '../components/login';
 import { Header } from '../components/home';
+import Sidebar from '../components/sidebar/Sidebar';
 
 const Layout = ({ children }) => {
   const loggedin = useSelector((state) => state.login.loggedIn);
+  const showMenu = useSelector((state) => state.home.showMenu);
   return (
     <>
       {!loggedin && (
@@ -32,7 +34,9 @@ const Layout = ({ children }) => {
             <Header />
           </div>
           <div className="content">
-            <div className="nav">Nav</div>
+            <div className={`nav ${showMenu ? 'Closed' : ''}`}>
+              <Sidebar />
+            </div>
             <div className="content1">{children}</div>
           </div>
         </div>

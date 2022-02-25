@@ -5,11 +5,13 @@ import loadingReducer from './reducers/loading';
 
 // Screen Reducers
 import loginReducer from './reducers/login';
+import homeReducer from './reducers/home';
 
 const rootReducer = combineReducers({
   login: loginReducer,
   error: errorReducer,
-  loading: loadingReducer
+  loading: loadingReducer,
+  home: homeReducer
 });
 
 export default rootReducer;
