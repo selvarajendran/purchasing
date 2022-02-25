@@ -1,7 +1,7 @@
 import { LOGOUT, LOGIN } from '../action/login';
 
 const initialState = {
-  loggedIn: false
+  loggedIn: true
 };
 
 export default (state = initialState, action = {}) => {

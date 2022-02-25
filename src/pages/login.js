@@ -1,11 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
+import * as loginAction from '../store/action/login';
 import { LoginHeader, LoginTitle, LoginForm, Divider } from '../components/login';
 import google from '../assets/img/google.png';
 
 const login = () => {
+  const dispatch = useDispatch();
   const handleOnClick = (data) => {
     console.log(data);
+    dispatch(loginAction.login());
   };
   return (
     <div

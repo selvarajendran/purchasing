@@ -2,6 +2,8 @@
   margin: 0;
 }
 
+/* Login screen starts here */
+
 .back {
   width: 39px;
   height: 19px;
@@ -261,4 +263,133 @@ input[type='checkbox']:checked {
   background: #ffffff;
   box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 11%);
   border-radius: 6px;
+}
+
+/* Login screen ends here */
+
+.main {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content-area';
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  padding-left: 37px;
+  padding-right: 34px;
+}
+
+.nav {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
+  border-radius: 0px 24px 24px 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.content {
+  grid-area: content-area;
+  background: #e5e5e5;
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+
+.header-search-par {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+
+.header-search {
+  background: #f6f7fa;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
+  border-radius: 14px;
+  width: 413px;
+  height: 48px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.header-right-section {
+  margin-left: auto;
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: end;
+}
+
+.header-lan-button {
+  width: 149px;
+  height: 48px;
+  background: #00c1f2;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  /* BGS - White */
+
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.header-user,
+.header-log {
+  background: #f4f9fd;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
+  border-radius: 14px;
+  width: 182px;
+  height: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-log {
+  background: #fff;
+  justify-content: start;
+  width: 90px;
+  margin-left: 20px;
+}
+
+.header-user-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #0a1629;
+}
+
+.header-logout {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #7d8592;
 }
