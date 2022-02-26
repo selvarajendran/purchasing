@@ -2,6 +2,15 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
 a {
   text-decoration: none;
   color: #2e4765;
@@ -308,13 +317,14 @@ input[type='checkbox']:checked {
   background: #e5e5e5;
   height: calc(100vh - 100px);
   display: flex;
+  min-height: 600px;
 }
 
 .content1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: -webkit-fill-available;
+  padding: 15px;
 }
 
 .header-search-par {
@@ -486,4 +496,46 @@ input[type='checkbox']:checked {
 .active .sidebar-title,
 a.active {
   color: #3f8cff;
+}
+
+/* Grid CSS starts here */
+
+.grid-header,
+.grid-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
+  border-radius: 14px;
+  margin-bottom: 10px;
+  height: 49px;
+  align-items: center;
+}
+
+.grid-header-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #91929e;
+}
+
+.grid-row-data {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #0a1629;
+}
+
+.grid-row-group {
+  overflow-y: scroll;
+  height: 500px;
 }
