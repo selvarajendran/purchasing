@@ -241,12 +241,9 @@ input[type='checkbox']:checked {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
-  align-items: center;
   color: #00c1f2;
   margin-top: 14px;
-  justify-content: end;
-  width: 426px;
+  margin-left: auto;
 }
 
 .signup {
