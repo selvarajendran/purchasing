@@ -2,15 +2,6 @@
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
-}
-
 a {
   text-decoration: none;
   color: #2e4765;
@@ -291,7 +282,7 @@ input[type='checkbox']:checked {
 .header {
   grid-area: header;
   display: flex;
-  height: 90px;
+  height: 56px;
   align-items: center;
   background: #ffffff;
   border-radius: 10px;
@@ -315,7 +306,7 @@ input[type='checkbox']:checked {
 .content {
   grid-area: content-area;
   background: #e5e5e5;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 56px);
   display: flex;
   min-height: 600px;
 }
@@ -503,7 +494,7 @@ a.active {
 .grid-header,
 .grid-row {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 100px 2fr 2fr 2fr 2fr 2fr;
   justify-content: space-between;
   background: #ffffff;
   box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
@@ -538,4 +529,9 @@ a.active {
 .grid-row-group {
   overflow-y: scroll;
   height: 500px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
 }

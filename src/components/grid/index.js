@@ -15,7 +15,11 @@ const Grid = ({ data, header, check }) => {
           const keys = Object.keys(row);
           return (
             <div className="grid-row">
-              {check && <div className="checkbox" />}
+              {check && (
+                <div className="checkbox">
+                  <input type="checkbox" />
+                </div>
+              )}
               {keys.map((key) => (
                 <div className="grid-row-data">{row[key]}</div>
               ))}
